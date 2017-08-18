@@ -1,0 +1,56 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    width: 350px;
+}
+
+#header {
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 15px;
+}
+
+p {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+.like { color: red; }
+#header #icon-box{
+    float: right;
+}
+#header #icon-box a { padding: 5px; }
+
+h1 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+a.btn {
+    background-color: #65aae5;
+    padding: 7px 15px;
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, .2);
+    transition: box-shadow .5s;
+}
+a.btn:hover {
+    box-shadow: inset 0px 0px 20px rgba(255, 255, 255, 1);
+    transition: box-shadow .5s;
+}
+/* Dark Layout */
+body.dark {
+    background: #2c2c2c;
+}
+
+.dark #header {
+    background: #1c1c1c;
+    color: #fff;
+}
+
+.dark a {
+    color: #fff;
+}
