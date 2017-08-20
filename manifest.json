@@ -3,11 +3,8 @@
   "name": "Webpage Capture",
   "version": "1.0",
   "description": "Captures webpage of specific tabs.",
-  //"icons": { "128": "icon_128.png" },
   "background": {
-    // "persistent": false,
-    "scripts": ["jquery-3.2.1.min.js", "webpageCaptureBackground.js", "popupScript.js", "info.js"] // event page
-  },
+    "scripts": ["jquery-3.2.1.min.js", "webpageCaptureBackground.js", "popupScript.js", "info.js"]},
   "content_scripts": [
       {
           "matches": [
@@ -20,7 +17,6 @@
   "browser_action": {
     "default_title": "Webpage Capture",
     "default_icon": "icon.png",
-    //"default_icon": "icon_19.png",
     "default_popup": "popup.html"
   }
 }

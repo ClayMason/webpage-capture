@@ -64,6 +64,16 @@ setBadge = function () {
     else chrome.browserAction.setBadgeText({text: value});
 }
 
+formatCurrentDate = function(){
+    date = new Date();
+
+    current_hour = date.getHours() % 12;
+    am_or_pm = "AM";
+    if (date.getHours() > 11) am_or_pm = "PM";
+    if (current_hour == 0) current_hour = 12;
+    return date.getMonth() + " / " + date.getDate() + " / " + date.getFullYear() + "\t" + current_hour + ":" + date.getMinutes() + am_or_pm;
+}
+
 setBadge();
 // // add listener
 chrome.runtime.onMessage.addListener(
@@ -73,7 +83,7 @@ chrome.runtime.onMessage.addListener(
         if (request.type == "page-contents"){
             console.log("Getting screenshot!");
 
-            capture = new WebpageCapture(request.page_title, request.page_url, request.data, Date.now() );
+            capture = new WebpageCapture(request.page_title, request.page_url, request.data, formatCurrentDate() );
             // save the capture and push the collection into local data
             saveCapture(current_capture, capture);
             console.log("Saved to collection.");
